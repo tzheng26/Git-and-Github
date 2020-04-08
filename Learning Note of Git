@@ -22,7 +22,7 @@ Check Status:
 
 $ git status
 ---------------------------------------------
-Check the modified difference
+Check the modified difference (before add)
 
 $ git diff <readme.txt>
 -------------------------------------
@@ -52,3 +52,44 @@ Log of every change
 
 $ git reflog
 -------------------------------------
+Working Directory:
+e.g. learngit folder
+
+Repository:
+.git (hidden directory. use $ ls -ah)
+include stage and master
+-------------------------------------
+使修改回到最近一次add or commit的状态
+
+$ git checkout -- readme.txt
+
+若修改的文件已add 到 stage，但没有commit：
+
+$ git reset HEAD <file> //回退到最新版本HEAD
+
+若已经commit 可用reset回到之前版本（在尚未提交到远程的前提下）
+-------------------------------------
+Remove 也是操作。
+
+$ rm test.txt
+
+在暂存区stage和版本库repositary中删除
+
+$ git rm
+$ git commit -m ""
+-------------------------------------
+删错了但版本库中还有：
+
+$ git checkout -- test.txt
+
+
+-------------------------------------
+远程仓库
+将同一个Git库分布到不同机器上
+首先拥有Github账户
+
+在机器上检测用户主目录下(/home/username/.ssh.id_rsa.pub)有没有.ssh目录，如果有，看看有没有id_rsa\id_rsa.pub文件，如有则跳过本步
+创建SSH Key
+
+$ ssh-keygen -t rsa -C "yourmail@example.com"
+
