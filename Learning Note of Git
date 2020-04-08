@@ -106,6 +106,8 @@ $ git push origin master
 --------------------------------------
 远程库到本地库
 
+$ git clone git@github.com:username/repositoryname.git
 
+also can use http protocol
 
 
