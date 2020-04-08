@@ -1,0 +1,54 @@
+Git installtion in Ubuntu:
+$ sudo apt-get install git
+----------------------------------------
+$ mkdir learngit
+$ cd learngit
+$ pwd
+/Users/michael/learngit
+------------------------------------------
+Change directory into repository of git:
+
+$ git init
+Initialized empty Git repository in /Users/michael/learngit/.git/
+---------------------------------------------------------------------
+Put text file into Git directory;
+Add to repository: 
+
+$ git add readme.txt
+
+$ git commit -m "<comment information>"
+---------------------------------------------
+Check Status:
+
+$ git status
+---------------------------------------------
+Check the modified difference
+
+$ git diff <readme.txt>
+-------------------------------------
+Check what have you modified with log
+
+$ git log
+or
+$ git log --pretty=oneline
+
+"HEAD" refers to current version
+"HEAD^"    ..    last    .
+"HEAD^^"   ..    .    last .  
+
+Use git reset go back to earlier version:
+
+$ git reset --hard HEAD^
+-------------------------------------
+Check the content of current version:
+
+$ cat readme.txt
+-------------------------------------
+Go back to future version:
+
+$ git reset --hard 1094a"(here is the version number)"
+-------------------------------------
+Log of every change
+
+$ git reflog
+-------------------------------------
