@@ -93,3 +93,19 @@ $ git checkout -- test.txt
 
 $ ssh-keygen -t rsa -C "yourmail@example.com"
 
+在github上关联密钥
+
+新建库
+
+$ git remote add origin git@github.com:用户名/learngit.git //origin是远程库默认名
+
+$ git push -u origin master //将当前分支推到远程，-u 将本地和远程关联起来
+
+之后本地提交 
+$ git push origin master
+--------------------------------------
+远程库到本地库
+
+
+
+
